@@ -1,85 +1,44 @@
-Started GET "/" for 127.0.0.1 at 2022-10-27 13:44:46 -0500
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /opt/homebrew/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /opt/homebrew/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 634)
-Completed 200 OK in 10ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 5094)
-
-
-Started GET "/" for 127.0.0.1 at 2022-10-27 13:44:47 -0500
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /opt/homebrew/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /opt/homebrew/lib/ruby/gems/3.1.0/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 297)
-Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.0ms | Allocations: 1018)
-
-
-  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
-  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to CreateMovies (20221027184920)
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to CreateMovies (20221027184920)
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to CreateMovies (20221027184920)
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "movies" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "rating" varchar, "description" text, "release_date" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20221027184920"]]
-  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-27 18:51:02.677484"], ["updated_at", "2022-10-27 18:51:02.677484"]]
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "My Neighbor Totoro"], ["rating", "G"], ["description", nil], ["release_date", "1988-04-16 00:00:00"], ["created_at", "2022-10-27 18:52:39.998947"], ["updated_at", "2022-10-27 18:52:39.998947"]]
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mMovie Create (0.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Green Book"], ["rating", "PG-13"], ["description", nil], ["release_date", "2018-11-16 00:00:00"], ["created_at", "2022-10-27 18:52:40.001774"], ["updated_at", "2022-10-27 18:52:40.001774"]]
-  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mMovie Create (0.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Parasite"], ["rating", "R"], ["description", nil], ["release_date", "2019-05-30 00:00:00"], ["created_at", "2022-10-27 18:52:40.003089"], ["updated_at", "2022-10-27 18:52:40.003089"]]
-  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mMovie Create (0.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Nomadland"], ["rating", "R"], ["description", nil], ["release_date", "2021-02-19 00:00:00"], ["created_at", "2022-10-27 18:52:40.004372"], ["updated_at", "2022-10-27 18:52:40.004372"]]
-  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "CODA"], ["rating", "PG-13"], ["description", nil], ["release_date", "2021-08-13 00:00:00"], ["created_at", "2022-10-27 18:52:40.005698"], ["updated_at", "2022-10-27 18:52:40.005698"]]
-  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-10-27 19:42:08.941276"], ["updated_at", "2022-10-27 19:42:08.941276"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "My Neighbor Totoro"], ["rating", "G"], ["description", nil], ["release_date", "1988-04-16 00:00:00"], ["created_at", "2022-10-27 19:14:54.117536"], ["updated_at", "2022-10-27 19:14:54.117536"]]
-  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Green Book"], ["rating", "PG-13"], ["description", nil], ["release_date", "2018-11-16 00:00:00"], ["created_at", "2022-10-27 19:14:54.120105"], ["updated_at", "2022-10-27 19:14:54.120105"]]
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "My Neighbor Totoro"], ["rating", "G"], ["description", nil], ["release_date", "1988-04-16 00:00:00"], ["created_at", "2022-10-27 19:42:12.587509"], ["updated_at", "2022-10-27 19:42:12.587509"]]
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Parasite"], ["rating", "R"], ["description", nil], ["release_date", "2019-05-30 00:00:00"], ["created_at", "2022-10-27 19:14:54.121737"], ["updated_at", "2022-10-27 19:14:54.121737"]]
+  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Green Book"], ["rating", "PG-13"], ["description", nil], ["release_date", "2018-11-16 00:00:00"], ["created_at", "2022-10-27 19:42:12.590291"], ["updated_at", "2022-10-27 19:42:12.590291"]]
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mMovie Create (0.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Nomadland"], ["rating", "R"], ["description", nil], ["release_date", "2021-02-19 00:00:00"], ["created_at", "2022-10-27 19:14:54.123100"], ["updated_at", "2022-10-27 19:14:54.123100"]]
+  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Parasite"], ["rating", "R"], ["description", nil], ["release_date", "2019-05-30 00:00:00"], ["created_at", "2022-10-27 19:42:12.591696"], ["updated_at", "2022-10-27 19:42:12.591696"]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mMovie Create (0.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "CODA"], ["rating", "PG-13"], ["description", nil], ["release_date", "2021-08-13 00:00:00"], ["created_at", "2022-10-27 19:14:54.124473"], ["updated_at", "2022-10-27 19:14:54.124473"]]
+  [1m[36mMovie Create (0.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Nomadland"], ["rating", "R"], ["description", nil], ["release_date", "2021-02-19 00:00:00"], ["created_at", "2022-10-27 19:42:12.593017"], ["updated_at", "2022-10-27 19:42:12.593017"]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mMovie Create (0.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Forrest Gump"], ["rating", "G"], ["description", nil], ["release_date", "1994-07-06 00:00:00"], ["created_at", "2022-10-27 19:14:54.125839"], ["updated_at", "2022-10-27 19:14:54.125839"]]
+  [1m[36mMovie Create (0.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "CODA"], ["rating", "PG-13"], ["description", nil], ["release_date", "2021-08-13 00:00:00"], ["created_at", "2022-10-27 19:42:12.594364"], ["updated_at", "2022-10-27 19:42:12.594364"]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Black Panther"], ["rating", "G"], ["description", nil], ["release_date", "2018-02-14 00:00:00"], ["created_at", "2022-10-27 19:14:54.127167"], ["updated_at", "2022-10-27 19:14:54.127167"]]
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Get Out"], ["rating", "PG-13"], ["description", nil], ["release_date", "2017-02-24 00:00:00"], ["created_at", "2022-10-27 19:14:54.128592"], ["updated_at", "2022-10-27 19:14:54.128592"]]
+  [1m[36mMovie Create (0.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Forrest Gump"], ["rating", "G"], ["description", nil], ["release_date", "1994-07-06 00:00:00"], ["created_at", "2022-10-27 19:42:12.595675"], ["updated_at", "2022-10-27 19:42:12.595675"]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mMovie Create (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Avengers: Endgame"], ["rating", "G"], ["description", nil], ["release_date", "2019-04-04 00:00:00"], ["created_at", "2022-10-27 19:14:54.130015"], ["updated_at", "2022-10-27 19:14:54.130015"]]
+  [1m[36mMovie Create (0.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Black Panther"], ["rating", "G"], ["description", nil], ["release_date", "2018-02-14 00:00:00"], ["created_at", "2022-10-27 19:42:12.596980"], ["updated_at", "2022-10-27 19:42:12.596980"]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Get Out"], ["rating", "PG-13"], ["description", nil], ["release_date", "2017-02-24 00:00:00"], ["created_at", "2022-10-27 19:42:12.598313"], ["updated_at", "2022-10-27 19:42:12.598313"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMovie Create (0.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "rating", "description", "release_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Avengers: Endgame"], ["rating", "G"], ["description", nil], ["release_date", "2019-04-04 00:00:00"], ["created_at", "2022-10-27 19:42:12.599601"], ["updated_at", "2022-10-27 19:42:12.599601"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMovie Load (0.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
