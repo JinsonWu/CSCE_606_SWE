@@ -1,4 +1,4 @@
 Author: Chun-Sheng Wu
 UIN: 832001192
-GitHub Repo Link: 
+GitHub Repo Link: https://github.com/JinsonWu/CSCE_606_SWE/tree/main/HW2/HW2_Rottenpotatoes
 Heroku Link: https://rottenpotatoes-swe.herokuapp.com/movies 
