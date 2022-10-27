@@ -1,0 +1,4 @@
+Author: Chun-Sheng Wu
+UIN: 832001192
+GitHub Repo Link: 
+Heroku Link: https://rottenpotatoes-swe.herokuapp.com/movies 
